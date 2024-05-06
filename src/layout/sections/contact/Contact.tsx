@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Button} from "../../../components/Button";
 
 export const Contact = () => {
     return (
@@ -22,7 +21,6 @@ export const Contact = () => {
 
 const StyledContact= styled.section`
     min-height: 50vh;
-    background-color: rgba(204, 199, 56, 0.86);
 `
 
 const StyledForm = styled.form`
@@ -36,6 +34,9 @@ const StyledForm = styled.form`
 `
 const Field = styled.input`
 
+`
+const Button = styled.a`
+    
 `
 
 const Title = styled.h2`

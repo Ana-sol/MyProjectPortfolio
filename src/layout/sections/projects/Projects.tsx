@@ -15,7 +15,8 @@ export const Projects = () => {
             <FlexWrapper justify={"space-around"} wrap={"wrap"}>
                 <Project title={"Project Name"}
                          src={projOne}
-                         text={"I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."}/>
+                         text={"I created this personal project in order to show how to create an" +
+                             " interface in Figma using a portfolio as an example."}/>
                 <Project title={"Project Name"}
                          src={projTwo}
                          text={"What was your role, your deliverables, if the project was personal, freelancing."}/>
@@ -29,5 +30,4 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     min-height: 100vh;
-    background-color: #6d73a1;
 `

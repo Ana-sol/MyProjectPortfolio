@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {Link} from "../../../../components/Link";
 
 
 type ProjectPropsType = {
@@ -14,14 +13,13 @@ export const Project = (props: ProjectPropsType) => {
         <StyledProject>
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
-            <Link href={"#"}>View Project</Link>
+            <Button>View Project</Button>
             <Image src={props.src} alt=""/>
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
-    background-color: rgba(241, 233, 74, 0.86);
     max-width: 992px;
     width: 100%;
 `
@@ -30,6 +28,8 @@ const Image = styled.img`
     width: 100%;
     height: 524px;
     object-fit: cover;
+    position: relative;
+    left: 400px;
 
 `
 
@@ -40,7 +40,9 @@ const Title = styled.h3`
 `
 
 const Text = styled.p`
-
-
+display: block;
+    
+`
+const Button = styled.a`
 `
 
