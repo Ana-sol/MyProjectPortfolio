@@ -1,5 +1,5 @@
 import styled, {createGlobalStyle} from "styled-components";
-import {theme} from "./Themes";
+import {theme} from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     section {
         background-color: ${theme.colors.primaryBg};
+        padding: 100px 0;
     }
     
 `

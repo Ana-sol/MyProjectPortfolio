@@ -3,6 +3,7 @@ import styled from "styled-components";
 import photo from '../../../assets/images/girl.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
+import image from '../../../assets/images/yellow-bg-_1_.webp'
 
 export const Main = () => {
     return (
@@ -17,6 +18,7 @@ export const Main = () => {
                         <ButtonSecond>LinkedIn</ButtonSecond>
                     </div>
                     <Photo src={photo} alt=""/>
+                    <Image src={image} alt=""/>
                 </FlexWrapper>
             </Container>
 
@@ -32,9 +34,26 @@ const StyledMain = styled.section`
 `
 
 const Photo = styled.img`
+    position: relative;
     width: 720px;
     height: 629px;
     object-fit: cover;
+   z-index: 99999;
+    
+`
+const Image = styled.img`
+
+    /* Vector */
+    position: absolute;
+    width: 777px;
+    height: 877px;
+    left: 47%;
+    right: -57px;
+    top: -248px;
+    bottom: 0;
+    background: rgb(255, 198, 55);
+   
+    
     
 `
 
@@ -47,7 +66,6 @@ const MainTitle = styled.h1`
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
-    letter-spacing: 0%;
     text-align: left;
     text-transform: uppercase;
 `
@@ -58,7 +76,6 @@ const Name = styled.h2`
     font-size: 64px;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: 0%;
     text-align: left;
 
 `
@@ -69,7 +86,6 @@ const SmallText = styled.span`
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
-    letter-spacing: 0%;
     text-align: left;
 `
 
@@ -82,6 +98,9 @@ const ButtonFirst = styled.a`
     border: 2px solid rgb(37, 40, 43);
     background: rgb(253, 196, 53);
     padding: 8px 24px;
+    display: inline-block;
+    flex-direction: column;
+    margin-right: 10px;
 `
 
 const ButtonSecond = styled.a`
@@ -93,6 +112,8 @@ const ButtonSecond = styled.a`
     border: 2px solid rgb(37, 40, 43);
     border-radius: 8px;
     padding: 8px 24px;
-
+   
+    
+    
 `
 
