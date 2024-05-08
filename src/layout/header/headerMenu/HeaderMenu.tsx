@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 
 
@@ -43,7 +44,7 @@ const Link = styled.a`
 
     :hover {
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: ${theme.colors.accent};
         transform: skewY(10deg);
 
     }

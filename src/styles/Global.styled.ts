@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.primaryBg};
+        line-height: 1.2;
     }
     
     a {
@@ -38,5 +39,14 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBg};
         padding: 100px 0;
     }
+
+    h3 {
+
+    }
+    
+    p {
+        
+    }
     
 `
+

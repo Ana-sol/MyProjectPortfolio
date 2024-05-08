@@ -3,7 +3,8 @@ import styled from "styled-components";
 import photo from '../../../assets/images/girl.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
-import image from '../../../assets/images/yellow-bg-_1_.webp'
+import {theme} from "../../../styles/Theme";
+
 
 export const Main = () => {
     return (
@@ -13,12 +14,14 @@ export const Main = () => {
                     <div>
                         <MainTitle>Software Developer</MainTitle>
                         <Name>Hello, my name is Vahid Navazan</Name>
-                        <SmallText>Short text with details about you, what you do or your professional career. You can add more information on the about page.</SmallText>
-                        <ButtonFirst>Projects</ButtonFirst>
-                        <ButtonSecond>LinkedIn</ButtonSecond>
+                        <SmallText>Short text with details about you, what you do or your professional career. You can add more information on the page.</SmallText>
+                        <Link href="">Projects</Link>
+                        <Link href="">LinkedIn</Link>
                     </div>
-                    <Photo src={photo} alt=""/>
-                    <Image src={image} alt=""/>
+                    <PhotoWrapper>
+                        <Photo src={photo} alt=""/>
+                    </PhotoWrapper>
+
                 </FlexWrapper>
             </Container>
 
@@ -26,7 +29,22 @@ export const Main = () => {
     );
 };
 
+const PhotoWrapper = styled.div`
+position: relative;
+    z-index: 0;
+    
+    &::before {
+        content: "";
+        width: 450px;
+        height: 590px;
+        border: 5px solid ${theme.colors.accent};
+        position: absolute;
+        top: 40px;
+        left: 195px;
+        z-index: -1;
+    }
 
+`
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
@@ -38,26 +56,9 @@ const Photo = styled.img`
     width: 720px;
     height: 629px;
     object-fit: cover;
-   z-index: 99999;
-    
-`
-const Image = styled.img`
-
-    /* Vector */
-    position: absolute;
-    width: 777px;
-    height: 877px;
-    left: 47%;
-    right: -57px;
-    top: -248px;
-    bottom: 0;
-    background: rgb(255, 198, 55);
    
     
-    
 `
-
-
 
 
 const MainTitle = styled.h1`
@@ -75,8 +76,7 @@ const Name = styled.h2`
     font-family: 'Roboto', sans-serif;
     font-size: 64px;
     font-weight: 700;
-    line-height: 120%;
-    text-align: left;
+   margin: 10px 0;
 
 `
 
@@ -89,8 +89,7 @@ const SmallText = styled.span`
     text-align: left;
 `
 
-const ButtonFirst = styled.a`
-    /* button / primary */
+const Link = styled.a`
     position: relative;
     width: 117px;
     height: 43px;
@@ -101,19 +100,6 @@ const ButtonFirst = styled.a`
     display: inline-block;
     flex-direction: column;
     margin-right: 10px;
-`
-
-const ButtonSecond = styled.a`
-    /* button / secondary */
-    position: absolute;
-    width: 117px;
-    height: 43px;
-    box-sizing: border-box;
-    border: 2px solid rgb(37, 40, 43);
-    border-radius: 8px;
-    padding: 8px 24px;
-   
-    
+    margin-top: 20px;
     
 `
-
