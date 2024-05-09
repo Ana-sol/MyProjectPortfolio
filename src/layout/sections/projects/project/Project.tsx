@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 
 type ProjectPropsType = {
@@ -29,6 +30,8 @@ const StyledProject = styled.div`
     max-width: 992px;
     width: 100%;
     margin-top: 80px;
+    border: 5px solid ${theme.colors.accent};
+    margin-left: 20px;
   
 `
 const Image = styled.img`
@@ -42,23 +45,25 @@ const Image = styled.img`
 
 
 const Title = styled.h3`
-    color: rgb(37, 40, 43);
+    color: ${theme.colors.fontTitle};
     font-family: 'Playfair Display';
     font-size: 40px;
     font-weight: 700;
     line-height: 150%;
+    margin-left: 20px;
  
 
 `
 
 const Text = styled.p`
-    color: rgb(130, 130, 130);
+    color: ${theme.colors.fontText};
     font-family: 'Nunito';
     font-size: 18px;
     font-weight: 400;
     position: static;
     width: 406.68px;
     height: 81px;
+    margin-left: 20px;
     
 `
 const Link = styled.a`
@@ -72,6 +77,7 @@ const Link = styled.a`
     font-family: 'Roboto';
     font-size: 18px;
     font-weight: 500;
+    margin-left: 20px;
     
    
 `

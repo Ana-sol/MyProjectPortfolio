@@ -48,7 +48,7 @@ position: relative;
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
-    background: rgb(249, 250, 255);
+    background: ${theme.colors.primaryBg};
 `
 
 const Photo = styled.img`

@@ -55,9 +55,9 @@ const Button = styled.a`
     border-radius: 8px;
     background: rgb(253, 196, 53);
     padding: 8px 24px 8px 24px;
-   margin-left: 320px;
+    margin-left: 320px;
     color: rgb(37, 40, 43);
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 18px;
     font-weight: 500;
     text-align: left;

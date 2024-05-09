@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
     iconId: string
@@ -21,4 +22,5 @@ const StyledSkill = styled.div`
     order: 1;
     flex-grow: 0;
     margin: 74px 0px;
+   
 `

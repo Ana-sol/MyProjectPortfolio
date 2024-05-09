@@ -4,6 +4,7 @@ import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {theme} from "../../styles/Theme";
 
 const items = ["About", "Projects", "Contacts"]
 export const Header = () => {
@@ -21,7 +22,7 @@ export const Header = () => {
 
 
 const StyledHeader = styled.header`
-    background: rgb(249, 250, 255);
+    background: ${theme.colors.secondaryBg};
     padding: 20px 0;
     position: fixed;
     top: 0;
