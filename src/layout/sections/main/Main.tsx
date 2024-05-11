@@ -10,28 +10,31 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
-                    <div>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
+                    <TextBlock>
                         <MainTitle>Software Developer</MainTitle>
                         <Name>Hello, my name is Vahid Navazan</Name>
                         <SmallText>Short text with details about you, what you do or your professional career. You can add more information on the page.</SmallText>
-                        <Link href="">Projects</Link>
-                        <Link href="">LinkedIn</Link>
-                    </div>
+                        <LinkProjects href="">Projects</LinkProjects>
+                        <LinkLinkedin href="">LinkedIn</LinkLinkedin>
+                    </TextBlock>
                     <PhotoWrapper>
                         <Photo src={photo} alt=""/>
                     </PhotoWrapper>
-
                 </FlexWrapper>
             </Container>
-
         </StyledMain>
     );
 };
 
+const TextBlock = styled.div`
+    max-width: 400px;
+    width: 100%;
+`
 const PhotoWrapper = styled.div`
-position: relative;
+    position: relative;
     z-index: 0;
+    flex-wrap: wrap;
     
     &::before {
         content: "";
@@ -42,64 +45,73 @@ position: relative;
         top: 40px;
         left: 195px;
         z-index: -1;
+
+        @media ${theme.media.mobile} {
+            width: 250px;
+            height: 350px;
+           
+        }
     }
 
 `
 const StyledMain = styled.section`
     min-height: 100vh;
-    display: flex;
     background: ${theme.colors.primaryBg};
 `
 
 const Photo = styled.img`
-    position: relative;
     width: 720px;
     height: 629px;
     object-fit: cover;
-   
     
+    @media ${theme.media.mobile} {
+        width: 450px;
+        height: 394px;
+    }
+   
 `
 
-
 const MainTitle = styled.h1`
-    color: rgb(253, 196, 53);
+    color: ${theme.colors.accent};
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: left;
     text-transform: uppercase;
 `
 
 const Name = styled.h2`
-    color: rgb(51, 51, 51);
+    color: ${theme.colors.fontMain};
     font-family: 'Roboto', sans-serif;
     font-size: 64px;
-    font-weight: 700;
-   margin: 10px 0;
-
 `
 
 const SmallText = styled.span`
-    color: rgb(130, 130, 130);
+    color: ${theme.colors.fontText};
     font-family: 'Nunito', sans-serif;
     font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: left;
+  
 `
 
-const Link = styled.a`
+const LinkProjects = styled.a`
     position: relative;
+    width: 115px;
+    height: 43px;
+    display:inline-block;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 8px;
+    background: ${theme.colors.accent};
+  
+`
+const LinkLinkedin = styled.a`
+    position: absolute;
     width: 117px;
     height: 43px;
+    padding: 8px 24px 8px 24px;
+    box-sizing: border-box;
+    border: 2px solid ${theme.colors.fontTitle};
     border-radius: 8px;
-    border: 2px solid rgb(37, 40, 43);
-    background: rgb(253, 196, 53);
-    padding: 8px 24px;
-    display: inline-block;
-    flex-direction: column;
-    margin-right: 10px;
     margin-top: 20px;
-    
+
+
 `
