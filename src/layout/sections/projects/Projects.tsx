@@ -32,5 +32,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-    
+    ${FlexWrapper} {
+        gap: 30px;
+    }
 `

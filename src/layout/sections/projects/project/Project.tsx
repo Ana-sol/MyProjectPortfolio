@@ -13,13 +13,14 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <FlexWrapper justify={"space-between"} align={"center"}>
+            <FlexWrapper justify={"space-around"} align={"center"}>
                     <div>
                         <Title>{props.title}</Title>
                         <Text>{props.text}</Text>
                         <Link href="">View Project</Link>
                     </div>
                         <Image src={props.src} alt=""/>
+
                 </FlexWrapper>
 
         </StyledProject>
@@ -27,12 +28,18 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-    max-width: 992px;
-    width: 100%;
+    
     margin-top: 80px;
     border: 5px solid ${theme.colors.accent};
     margin-left: 20px;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
   
+    @media ${theme.media.desktop} {
+        max-width: 998px;
+    }
 `
 const Image = styled.img`
     width: 496px;
@@ -60,10 +67,11 @@ const Text = styled.p`
     font-family: 'Nunito';
     font-size: 18px;
     font-weight: 400;
-    position: static;
     width: 406.68px;
     height: 81px;
     margin-left: 20px;
+    margin-top: 15px;
+    
     
 `
 const Link = styled.a`

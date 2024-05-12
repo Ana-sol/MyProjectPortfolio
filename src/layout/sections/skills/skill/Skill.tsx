@@ -18,9 +18,10 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-   width: 15%;
-    order: 1;
-    flex-grow: 0;
-    margin: 74px 0px;
+    max-width: 100%;
+    width: 15%;
+    flex-grow: 1;
+  padding: 50px 70px;
+   
    
 `

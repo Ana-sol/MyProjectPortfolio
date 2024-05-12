@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Contact = () => {
     return (
@@ -41,7 +42,10 @@ const StyledForm = styled.form`
         height: 160px;
         resize: none;
     }
-    
+     @media ${theme.media.mobile} {
+         width: 375px;
+         padding-left: 200px;
+     }
 `
 const Field = styled.input`
     position: static;
@@ -70,5 +74,5 @@ const Title = styled.h2`
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
-    text-align: left;
+  
 `

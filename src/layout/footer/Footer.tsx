@@ -48,8 +48,10 @@ const StyledMap = styled.div`
 `
 
 const StyledFooter = styled.footer`
-    background-color: ${theme.colors.secondaryBg};
+    background-color: ${theme.colors.primaryBg};
     padding: 40px 0;
+    display: grid;
+   
 `
 const SocialList = styled.ul`
     list-style: none;
@@ -62,7 +64,7 @@ const SocialLink = styled.a`
 `
 
 const SocialItem = styled.li`
-
+    
 `
 
 const Copyright = styled.small`

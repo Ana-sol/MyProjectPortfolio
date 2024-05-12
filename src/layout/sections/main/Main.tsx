@@ -4,13 +4,14 @@ import photo from '../../../assets/images/girl.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
+                <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
                     <TextBlock>
                         <MainTitle>Software Developer</MainTitle>
                         <Name>Hello, my name is Vahid Navazan</Name>
@@ -28,8 +29,9 @@ export const Main = () => {
 };
 
 const TextBlock = styled.div`
-    max-width: 400px;
+    max-width: 420px;
     width: 100%;
+    
 `
 const PhotoWrapper = styled.div`
     position: relative;
@@ -60,7 +62,7 @@ const StyledMain = styled.section`
 `
 
 const Photo = styled.img`
-    width: 720px;
+    width: 700px;
     height: 629px;
     object-fit: cover;
     
@@ -79,9 +81,13 @@ const MainTitle = styled.h1`
 `
 
 const Name = styled.h2`
+    ${font({family: "'Roboto', sans-serif", Fmax: 64, Fmin: 42})}
     color: ${theme.colors.fontMain};
-    font-family: 'Roboto', sans-serif;
-    font-size: 64px;
+  
+    
+    @media ${theme.media.mobile} {
+        margin: 12px 0;
+    }
 `
 
 const SmallText = styled.span`
