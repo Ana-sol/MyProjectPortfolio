@@ -5,7 +5,6 @@ import {theme} from "../../styles/Theme";
 //Menu
 
 const MenuItem = styled.li`
-    
 `
 const Link = styled.a`
     font-family: 'Nunito', sans-serif;
@@ -32,7 +31,6 @@ const Link = styled.a`
 const MobileMenu = styled.nav`
   
 `
-
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     position: fixed;
     top: 0;

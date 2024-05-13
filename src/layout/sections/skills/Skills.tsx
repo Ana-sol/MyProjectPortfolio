@@ -5,24 +5,56 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
 
+
+const skillData = [
+    {
+        iconId: "vscode"
+    },
+    {
+        iconId: "js"
+    },
+    {
+        iconId: "css"
+    },
+    {
+        iconId: "html"
+    },
+    {
+        iconId: "man"
+    },
+    {
+        iconId: "vector"
+    },
+    {
+        iconId: "cat"
+    },
+    {
+        iconId: "git"
+    },
+    {
+        iconId: "react"
+    },
+    {
+        iconId: "sass"
+    },
+    {
+        iconId: "bootstrap"
+    },
+    {
+        iconId: "tailwind"
+    },
+
+]
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                    <Skill iconId={"vscode"}/>
-                    <Skill iconId={"js"}/>
-                    <Skill iconId={"css"}/>
-                    <Skill iconId={"html"}/>
-                    <Skill iconId={"man"}/>
-                    <Skill iconId={"vector"}/>
-                    <Skill iconId={"cat"}/>
-                    <Skill iconId={"git"}/>
-                    <Skill iconId={"react"}/>
-                    <Skill iconId={"sass"}/>
-                    <Skill iconId={"bootstrap"}/>
-                    <Skill iconId={"tailwind"}/>
+
+                    {skillData.map((s, index)=> {
+                        return <Skill iconId={s.iconId} key={index}/>
+                    })}
                 </FlexWrapper>
             </Container>
 

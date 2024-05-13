@@ -21,7 +21,5 @@ const StyledSkill = styled.div`
     max-width: 100%;
     width: 15%;
     flex-grow: 1;
-  padding: 50px 70px;
-   
-   
+    padding: 50px 70px;
 `

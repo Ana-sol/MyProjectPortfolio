@@ -4,6 +4,8 @@ import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
 
+
+
 export const Footer = () => {
     return (
         <StyledFooter>
@@ -43,15 +45,12 @@ export const Footer = () => {
 const StyledMap = styled.div`
     border-radius: 20px;
     margin-top: 40px;
-    
-  
 `
 
 const StyledFooter = styled.footer`
     background-color: ${theme.colors.primaryBg};
     padding: 40px 0;
     display: grid;
-   
 `
 const SocialList = styled.ul`
     list-style: none;
@@ -72,8 +71,7 @@ const Copyright = styled.small`
     width: 143px;
     height: 22px;
     color: ${theme.colors.fontText};
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
     margin-top: 20px;
-
 `

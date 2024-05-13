@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Project} from "./project/Project";
@@ -7,11 +6,11 @@ import projOne from './../../../assets/images/yoga.webp'
 import projTwo from './../../../assets/images/calender.webp'
 import projThree from './../../../assets/images/phone.webp'
 import { Container } from '../../../components/Container';
+import {S} from './project/Projects_Styles'
 
-
-export const Projects = () => {
+export const Projects: React.FC = () => {
     return (
-        <StyledProjects>
+        <S.Projects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <FlexWrapper justify={"space-between"} wrap={"wrap"}>
@@ -27,12 +26,7 @@ export const Projects = () => {
                              text={"You can also add in this description the type of the project, if it was for web, mobile, electron."}/>
                 </FlexWrapper>
             </Container>
-        </StyledProjects>
+        </S.Projects>
     );
 };
 
-const StyledProjects = styled.section`
-    ${FlexWrapper} {
-        gap: 30px;
-    }
-`
