@@ -1,35 +1,36 @@
-import React from 'react';
 import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../styles/Theme";
 
 
+//Menu
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
-                <ul>
-                    {props.menuItems.map((item, index) => {
-                        return <ListItem key={index}>
-                            <Link href="">{item}</Link>
-                        </ListItem>
-                    })}
-                </ul>
-            </MobileMenuPopup>
-
-        </StyledMobileMenu>
-    );
-};
-
-const StyledMobileMenu = styled.nav`
-    display: none;
+const MenuItem = styled.li`
     
-    @media ${theme.media.tablet} {
-        display: block;
+`
+const Link = styled.a`
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 156%;
+    color: #25282b;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+
+    :hover {
+        height: 100%;
+        background-color: ${theme.colors.accent};
+        transform: skewY(10deg);
+
     }
+`
+ // MobileMenu
+
+
+const MobileMenu = styled.nav`
+  
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
@@ -111,27 +112,19 @@ position: fixed;
         }
      }
 `
+ //Desktop Menu
 
-const ListItem = styled.li`
-    
-`
-const Link = styled.a`
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 156%;
-    color: #25282b;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0px;
-
-    :hover {
-        height: 100%;
-        background-color: ${theme.colors.accent};
-        transform: skewY(10deg);
-
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
     }
-
 `
+export const S = {
+    Link,
+    MenuItem,
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+    DesktopMenu,
+}

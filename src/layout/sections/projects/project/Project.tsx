@@ -28,10 +28,10 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-    
     margin-top: 80px;
     border: 5px solid ${theme.colors.accent};
     margin-left: 20px;
+    margin-right: 20px;
     align-items: center;
     flex: none;
     order: 0;
@@ -53,7 +53,7 @@ const Image = styled.img`
 
 const Title = styled.h3`
     color: ${theme.colors.fontTitle};
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 150%;
@@ -64,7 +64,7 @@ const Title = styled.h3`
 
 const Text = styled.p`
     color: ${theme.colors.fontText};
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;
     font-weight: 400;
     width: 406.68px;
@@ -82,7 +82,7 @@ const Link = styled.a`
     height: 43px;
     padding: 8px 24px 8px 24px;
     color: rgb(37, 40, 43);
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-left: 20px;
