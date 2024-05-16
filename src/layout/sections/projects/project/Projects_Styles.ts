@@ -2,67 +2,73 @@ import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 
+const Info = styled.div`
+    width: 100%;
+    padding: 0 40px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media ${theme.media.tablet} {
+        height: 524px;
+    }
+
+`
 
 const Project = styled.div`
-    margin-top: 80px;
-    border: 5px solid ${theme.colors.accent};
-    margin-left: 20px;
-    margin-right: 20px;
-    align-items: center;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
-    @media ${theme.media.desktop} {
-        max-width: 998px;
+    display: flex;
+    width: 100%;
+    max-width: 992px;
+    max-height: 524px;
+    border-radius: 24px;
+    box-shadow: 0 6px 64px rgba(112, 144, 176, 0.10);
+    overflow: hidden;
+    margin-bottom: 80px;
+    
+    &:last-of-type {
+        margin-bottom: 0;
     }
-`
+    
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        
+        @media ${theme.media.tablet} {
+            flex-direction: column-reverse;
+        }
+    }
+    `
+
+
 const Image = styled.img`
-    width: 496px;
-    height: 526px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 0px;
+    height: 524px;
+    object-fit: cover;
+
+    @media ${theme.media.tablet} {
+
+    }
 `
 
 
 const Title = styled.h3`
-    color: ${theme.colors.fontTitle};
+    color: ${theme.colors.primaryTitle};
     font-family: 'Playfair Display', sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 150%;
-    margin-left: 20px;
- 
-
+    white-space: nowrap;
 `
 
 const Text = styled.p`
-    color: ${theme.colors.fontText};
+    color: ${theme.colors.secondaryText};
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    width: 406.68px;
-    height: 81px;
-    margin-left: 20px;
-    margin-top: 15px;
+    line-height: 150%;
+    margin: 24px 0;
     
     
 `
-const Link = styled.a`
-    box-sizing: border-box;
-    border: 1px solid rgb(37, 40, 43);
-    border-radius: 24px;
-    width: 150px;
-    height: 43px;
-    padding: 8px 24px 8px 24px;
-    color: rgb(37, 40, 43);
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 20px;
-`
+
 
 const Projects = styled.section`
     ${FlexWrapper} {
@@ -75,5 +81,5 @@ export const S = {
     Image,
     Title,
     Text,
-    Link
+    Info
 }

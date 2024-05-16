@@ -3,9 +3,8 @@ export const theme = {
         primaryBg: "#F5F5F5",
         secondaryBg: "#FFFFFF",
         accent: "#FDC435",
-        fontTitle: "#25282B",
-        fontText: "#828282",
-        fontMain: "#333333"
+        primaryTitle: "#25282B",
+        secondaryText: "#828282"
     },
 
     media: {

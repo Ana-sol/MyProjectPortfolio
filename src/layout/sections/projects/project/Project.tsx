@@ -1,25 +1,26 @@
-import React from 'react';
-import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {S} from './Projects_Styles'
+import React, {ReactNode} from 'react';
+import {S} from './Projects_Styles';
+import {Button} from "../../../../components/menu/Button";
 
 
 type ProjectPropsType = {
-    title: string
-    text: string
-    src: string
+    projectName: string
+    description: string
+    image: string
     
 }
+
+
+
 export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     return (
         <S.Project>
-            <FlexWrapper justify={"space-around"} align={"center"}>
-                    <div>
-                        <S.Title>{props.title}</S.Title>
-                        <S.Text>{props.text}</S.Text>
-                        <S.Link href="">View Project</S.Link>
-                    </div>
-                        <S.Image src={props.src} alt=""/>
-            </FlexWrapper>
+            <S.Info>
+                <S.Title>{props.projectName}</S.Title>
+                <S.Text>{props.description}</S.Text>
+                <Button as={'a'} href={'#'} btnType={'projects'}>View Project</Button>
+            </S.Info>
+            <S.Image src={props.image} alt=""/>
         </S.Project>
     );
 };
