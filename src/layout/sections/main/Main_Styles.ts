@@ -3,12 +3,19 @@ import styled from "styled-components";
 import {font} from "../../../styles/Common";
 
 const Main = styled.section`
-    min-height: 100vh;
-    background: ${theme.colors.primaryBg};
+    min-height: auto;
+    display: flex;
+    padding: 110px 0 254px 0;
+    overflow: hidden;
+
+    @media ${theme.media.tablet} {
+        padding-bottom: 90px;
+    }
 `
 const TextBlock = styled.div`
     max-width: 420px;
     width: 100%;
+    
 `
 const PhotoWrapper = styled.div`
     position: relative;
@@ -39,7 +46,7 @@ const Photo = styled.img`
     object-fit: cover;
     
     @media ${theme.media.mobile} {
-        width: 450px;
+        width: auto;
         height: 394px;
     }
    
@@ -54,7 +61,7 @@ const MainTitle = styled.h1`
 
 const Name = styled.h2`
     ${font({family: "'Roboto', sans-serif", Fmax: 64, Fmin: 42})}
-    color: ${theme.colors.fontMain};
+    color: ${theme.colors.primaryTitle};
   
     
     @media ${theme.media.mobile} {
@@ -63,9 +70,11 @@ const Name = styled.h2`
 `
 
 const SmallText = styled.span`
-    color: ${theme.colors.fontText};
-    font-family: 'Nunito', sans-serif;
+    padding: 32px 22px 32px 0;
+    font-family: Nunito, sans-serif;
     font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
 `
 
 const LinkProjects = styled.a`
@@ -86,7 +95,7 @@ const LinkLinkedin = styled.a`
     height: 43px;
     padding: 8px 24px 8px 24px;
     box-sizing: border-box;
-    border: 2px solid ${theme.colors.fontTitle};
+    border: 2px solid ${theme.colors.primaryTitle};
     border-radius: 8px;
     margin-top: 20px;
 `

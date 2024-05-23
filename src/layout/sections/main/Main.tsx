@@ -9,10 +9,10 @@ export const Main: React.FC = () => {
     return (
         <S.Main>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
+                <FlexWrapper align={"flex-end"} justify={"space-around"} wrap={"wrap-reverse"}>
                     <S.TextBlock>
                         <S.MainTitle>Software Developer</S.MainTitle>
-                        <S.Name>Hello, my name is Vahid Navazan</S.Name>
+                        <S.Name>Hello, my name <br/> is Vahid Navazan</S.Name>
                         <S.SmallText>Short text with details about you, what you do or your professional career. You can add more information on the page.</S.SmallText>
                         <S.LinkProjects href="">Projects</S.LinkProjects>
                         <S.LinkLinkedin href="">LinkedIn</S.LinkLinkedin>

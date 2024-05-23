@@ -13,7 +13,7 @@ export const Logo = () => {
 const StyledLogo = styled.span`
     font-weight: 700;
     font-size: 26px;
-    color: ${theme.colors.fontMain};
+    color: ${theme.colors.primaryTitle};
     font-family: 'Comfortaa', sans-serif;
    
 `

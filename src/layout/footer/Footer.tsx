@@ -70,7 +70,7 @@ const Copyright = styled.small`
     position: static;
     width: 143px;
     height: 22px;
-    color: ${theme.colors.fontText};
+    color: ${theme.colors.primaryTitle};
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     margin-top: 20px;

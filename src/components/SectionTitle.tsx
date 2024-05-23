@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 export const SectionTitle = styled.h2`
-    color: ${theme.colors.fontTitle};
+    color: ${theme.colors.primaryTitle};
     text-align: center;
     font-family: 'Playfair Display', sans-serif;
     font-size: 48px;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const Contact= styled.section`
-    align-items: center;
+    height: auto;
 `
 
 const Form = styled.form`
@@ -57,7 +57,7 @@ const Button = styled.a`
 `
 
 const Title = styled.h2`
-    color: ${theme.colors.fontTitle};
+    color: ${theme.colors.primaryTitle};
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     font-weight: 600;

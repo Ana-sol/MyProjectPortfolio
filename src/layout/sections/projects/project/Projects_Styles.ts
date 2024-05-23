@@ -31,10 +31,16 @@ const Project = styled.div`
     
     &:nth-child(even) {
         flex-direction: row-reverse;
-        
+
         @media ${theme.media.tablet} {
             flex-direction: column-reverse;
         }
+    }
+
+        @media ${theme.media.tablet} {
+            max-height: 1047px;
+            flex-direction: column-reverse;
+            margin-bottom: 50px;
     }
     `
 
@@ -62,8 +68,6 @@ const Text = styled.p`
     color: ${theme.colors.secondaryText};
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
     margin: 24px 0;
     
     
