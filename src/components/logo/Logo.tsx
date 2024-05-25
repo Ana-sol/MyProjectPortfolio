@@ -1,19 +1,27 @@
 import React from 'react';
+import {Icon} from "../icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-export const Logo = () => {
+
+export const Logo: React.FC = () => {
     return (
-        <StyledLogo>
-            <span>Vahid Navazan</span>
-        </StyledLogo>
+        <Link href="">
+            <Icon iconId={'log'}/>
+        </Link>
     );
 };
 
-const StyledLogo = styled.span`
+
+const Link = styled.a`
+    font-family: Comfortaa, sans-serif;
+    font-size: 18px;
     font-weight: 700;
-    font-size: 26px;
-    color: ${theme.colors.primaryTitle};
-    font-family: 'Comfortaa', sans-serif;
-   
+    color: ${theme.colors.accent};
+   height: 45px;
+
+    &:hover {
+        color: ${theme.colors.accent};
+        cursor: pointer;
+    }
 `

@@ -17,21 +17,14 @@ const Form = styled.form`
     
     
     textarea {
-        width: 400px;
         height: 160px;
         resize: none;
-
-        @media ${theme.media.mobile} {
-            width: 375px;
-    }
-     @media ${theme.media.mobile} {
-         width: 375px;
+    
          
      }
 `
 const Field = styled.input`
-    position: static;
-    width: 400px;
+    width: 100%;
     height: 40px;
     align-items: center;
     margin-top: 10px;
@@ -47,7 +40,7 @@ const Button = styled.a`
     border-radius: 8px;
     background: ${theme.colors.accent};
     padding: 8px 24px 8px 24px;
-    margin-left: 320px;
+    align-self: flex-end;
     color: rgb(37, 40, 43);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;

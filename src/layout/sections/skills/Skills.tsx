@@ -64,4 +64,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 20px;
 `

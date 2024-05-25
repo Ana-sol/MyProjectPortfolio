@@ -7,6 +7,7 @@ const Main = styled.section`
     display: flex;
     padding: 110px 0 254px 0;
     overflow: hidden;
+    
 
     @media ${theme.media.tablet} {
         padding-bottom: 90px;
@@ -15,6 +16,8 @@ const Main = styled.section`
 const TextBlock = styled.div`
     max-width: 420px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     
 `
 const PhotoWrapper = styled.div`
@@ -28,25 +31,26 @@ const PhotoWrapper = styled.div`
         height: 590px;
         border: 5px solid ${theme.colors.accent};
         position: absolute;
-        top: 40px;
-        left: 195px;
+        top: 15px;
+        left: -30px;
         z-index: -1;
 
         @media ${theme.media.mobile} {
-            width: 250px;
-            height: 350px;
+            width: 235px;
+            height: 394px;
            
         }
     }
 `
 
 const Photo = styled.img`
-    width: 700px;
-    height: 629px;
+    max-width: 460px;
+    height: 600px;
     object-fit: cover;
+    object-position: -200px 0;
     
     @media ${theme.media.mobile} {
-        width: auto;
+        width: 235px;
         height: 394px;
     }
    
@@ -57,9 +61,10 @@ const MainTitle = styled.h1`
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
+  
 `
 
-const Name = styled.h2`
+const Name = styled.span`
     ${font({family: "'Roboto', sans-serif", Fmax: 64, Fmin: 42})}
     color: ${theme.colors.primaryTitle};
   
@@ -69,7 +74,7 @@ const Name = styled.h2`
     }
 `
 
-const SmallText = styled.span`
+const SmallText = styled.p`
     padding: 32px 22px 32px 0;
     font-family: Nunito, sans-serif;
     font-size: 24px;
@@ -77,28 +82,13 @@ const SmallText = styled.span`
     line-height: 36px;
 `
 
-const LinkProjects = styled.a`
-    position: relative;
-    width: 115px;
-    height: 43px;
-    display:inline-block;
-    margin-right: 15px;
-    margin-top: 20px;
-    padding: 8px 24px 8px 24px;
-    border-radius: 8px;
-    background: ${theme.colors.accent};
-  
+
+const ButtonBlock = styled.div`
+    display: flex;
+    gap: 12px;
+
 `
-const LinkLinkedin = styled.a`
-    position: absolute;
-    width: 117px;
-    height: 43px;
-    padding: 8px 24px 8px 24px;
-    box-sizing: border-box;
-    border: 2px solid ${theme.colors.primaryTitle};
-    border-radius: 8px;
-    margin-top: 20px;
-`
+
 
 export const S = {
     Main,
@@ -108,7 +98,6 @@ export const S = {
     MainTitle,
     Name,
     SmallText,
-    LinkProjects,
-    LinkLinkedin
+    ButtonBlock
 
 }
